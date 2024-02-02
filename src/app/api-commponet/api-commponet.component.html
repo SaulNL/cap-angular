@@ -1,0 +1,26 @@
+
+<!--<div *ngFor="let item of data1">
+{{item.name}}
+</div>-->
+
+  
+<div class="cont">
+
+    <div class="filtro">
+        <label for="nombre" > Buscar por nombre: </label>
+        <input type="text" (input)="filtrarPorNombre()" [(ngModel)]="nombreFiltro" name="nombre" />
+      </div>
+
+<div *ngFor="let character of data" class="card" style="width: 18rem; height: auto; display: inline-block; margin:10px 20px;">
+    <img [src]="character.image" alt="{{ character.name }}" class="card-img-top">
+  
+    <p class="text-center">Name: {{ character.name }}</p>
+    <p class="text-center">Gender: {{ character.gender }}</p>
+    <p class="text-center">Species: {{ character.species }}</p>
+    <p class="text-center">Status: {{ getEstado(character) }}</p>
+    
+    <button type="button" class="btn btn-outline-primary">Mostar Mas</button>
+
+
+</div>
+</div>

@@ -1,0 +1,77 @@
+<p>primer-componente vamos a las chelas!</p>
+
+<p></p>
+<p>{{nombre}}</p>
+
+<table border="1">
+ <thead>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Correo</th>
+    <th>Telefono</th>
+ </thead>
+ <tbody>
+    <tr>
+        <td>Saul</td>
+        <td>22</td>
+        <td>saulnava@gmail.com</td>
+        <td>7561119696</td>
+    </tr>
+    <tr>
+        <td>Adali</td>
+        <td>20</td>
+        <td>adalicantn@gamail.com</td>
+        <td>7564128563</td>
+    </tr>
+    <tr *ngIf="bandera">
+        <td>Marc</td>
+        <td>22</td>
+        <td>marcos@gmail.com</td>
+        <td>7564127452</td>
+    </tr>
+ </tbody>
+</table>
+
+
+
+<button type="button" (click)="cambiarNombre()">cambiarNombre</button>
+
+
+<div>
+    <label for="dias_semanas">Dias semanas</label>
+    <select [(ngModel)]="diasSeleccionados"> 
+        <option *ngFor="let dia of diasSemanas" [value]="dia.diaSolo">
+            {{dia.dia}}
+        </option>
+    </select>
+</div>
+
+<h1>{{diasSeleccionados}}</h1>
+
+<button type="button" (click)="mostrarArreglo()" class="btn btn-primary"> mostrar</button>
+
+
+
+<div>
+    <label for="year">Ingresa un año:</label>
+    <input type="number" id="year" [(ngModel)]="anno" />
+    <button (click)="nostrarsiglo()">Determinar Siglo</button>
+    <p *ngIf="siglo !== 0">El año {{ anno }} pertenece al siglo {{ siglo }}</p>
+    <p *ngIf="siglo === 0">Por favor, ingresa un año válido.</p>
+  </div>
+  
+
+
+
+  <div *ngIf="valoresTransformados.length > 0">
+    <p>Valores Transformados:</p>
+    <ul>
+      <li *ngFor="let valor of valoresTransformados">{{ valor }}</li>
+    </ul>
+  </div>
+
+  <div>
+    <button type="button" (click)="funcion2()">hola</button>
+  </div>
+  
+  <!--vomo a mostar el nombre editar en un arreglo nuevo, otro areglo -->

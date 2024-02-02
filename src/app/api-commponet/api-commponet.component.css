@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.filtro {
+    padding: 15px 0px 20px 15px;
+  }
+
+.cont{
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(to bottom right, rgb(91, 178, 236), rgb(39, 166, 240) 25%, rgb(255, 0, 255) 50%, rgb(207, 75, 174) 75%, rgb(0, 255, 234));
+    height: 100%;
+    min-height: 100vh;
+}
+
+p{
+    padding:1px;
+    background: rgba(253, 253, 253, 0.651);
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 5px auto 2px auto;
+    font-size: 1em;
+}
+.card{
+    background: rgba(255, 255, 255, 0.336);
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
